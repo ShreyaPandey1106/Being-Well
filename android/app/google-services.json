@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "851579210700",
+    "project_id": "beingwell-19808",
+    "storage_bucket": "beingwell-19808.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851579210700:android:619ecae603438f36352b69",
+        "android_client_info": {
+          "package_name": "com.project1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG6x-JdGYU7L5ZVnpHFv6zwGxQahJk15k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
