@@ -5,6 +5,7 @@ import {AuthContext} from './AuthProvider';
 
 import AuthStack from './AuthStack';
 import AppStack from './AppStack';
+import Footer from '../components/Footer';
 
 const Routes = () => {
   const {user, setUser} = useContext(AuthContext);
@@ -19,6 +20,8 @@ const Routes = () => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber; // unsubscribe on unmount
   }, []);
+  
+  
 
   if (initializing) return null;
 
@@ -27,6 +30,7 @@ const Routes = () => {
       
     <NavigationContainer>
     {user ? <AppStack /> : <AuthStack />}
+    {user && <Footer />}
   </NavigationContainer>
     
   );

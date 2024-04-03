@@ -16,13 +16,12 @@ const LoginScreen = ({navigation}) => {
     
     <View style={styles.loginScreen} >
       <View style={styles.androidSmall8}>
-
+      
       <Text style={styles.login}>{`LOGIN `}</Text>
       <Text style={[styles.beingWell, styles.beingWellClr]}>BEING WELL</Text>
       <Text
         style={[styles.pleaseEnterYour, styles.beingWellTypo]}
-      >{`Please enter your login details 
-to continue...  `}</Text>
+      >{`Please enter your login details to continue...  `}</Text>
         <View style={styles.form}>
         <FormInput
          labelValue={email}
@@ -47,7 +46,7 @@ to continue...  `}</Text>
         />
         </View>
         </View>
-    </View>
+      </View>
     </View>
   );
 };
@@ -55,8 +54,9 @@ to continue...  `}</Text>
 const styles = StyleSheet.create({
  
   form:{
-    position: "absolute",
-    top: 250
+    //  position: "absolute",
+    // top: 269,
+    marginRight: 55
 
   },
   formbutton:{
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
 
   beingWellClr: {
     color: Color.colorAliceblue_100,
-    position: "absolute",
+   // position: "absolute",
   },
   beingWellTypo: {
     fontFamily: FontFamily.quicksandSemiBold,
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   beingWell: {
-    top: 119,
-    left: 72,
+    //top: 119,
+    //left: 72,
     fontSize: FontSize.size_13xl,
     letterSpacing: 3.2,
     fontFamily: FontFamily.quicksandSemiBold,
@@ -127,14 +127,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   pleaseEnterYour: {
-    top: 184,
+    //top: 184,
     fontSize: FontSize.size_xl,
     color: Color.colorSandybrown,
-    width: 300,
-    left: 30,
+    //width: 300,
+    //left: 30,
     fontFamily: FontFamily.quicksandSemiBold,
     fontWeight: "600",
-    position: "absolute",
+    
   },
   byContinuingYou: {
     top: 590,
@@ -148,15 +148,22 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorGray_100,
     flex: 1,
     width: "100%",
-    height: 640,
-    marginHorizontal:"6%",
-    marginVertical: "25%",
-    overflow: "hidden",
+    height: "100%",
+    // marginHorizontal:"6%",
+    // marginVertical: "25%",
+    //overflow: "hidden",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   loginScreen:{
     backgroundColor: Color.colorGray_100,
     width: "100%",
     height: "100%",
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: 20
+
   }
 });
 

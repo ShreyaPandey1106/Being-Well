@@ -1,46 +1,61 @@
 // App.js
 
-import React from 'react';
-import { View, Text, StyleSheet, Image, ImageBackground } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, ImageBackground, TouchableOpacity } from 'react-native';
 import { FontSize, FontFamily, Color, Border } from "../GlobalStyles";
 
+import HomeCard from '../components/HomeCard';
+import SmallCard from '../components/SmallCard';
+
+
 const HomeScreen = () => {
+  
   return (
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-      <Image
-          source={require('../assets/profile.png')}
-          style={styles.profileImage}
-        />
-        <Text style={styles.greeting}>Hello {"\n"}Rachel Green</Text>
+    
+        <Text style={styles.greeting}>Hello!</Text>
+        <Text style={styles.userName}>Rachel Green</Text>
         {/* Tabs */}
-        <View style={styles.tabs}>
-        <Text style={styles.tab}>Overview</Text>
-        <Text style={styles.tab}>Productivity</Text>
-      </View>
-        
+        <View style={styles.buttonView}>
+        <TouchableOpacity style={styles.leftbutton} onPress={()=>{}}>
+        <Text style={styles.Buttontext}>Overview</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.rightbutton} onPress={()=>{}}>
+        <Text style={styles.rightButtontext}>Productivity</Text>
+        </TouchableOpacity>
+      
+        </View>
       </View>
       
       <ImageBackground
         source={require('../assets/home.png')}
         style={styles.backgroundImage}
       >
-      
-
-      {/* Daily Progress */}
-      <View style={styles.progress}>
-        <Text style={styles.progressText}>Daily Progress</Text>
-        <Text style={styles.progressPercentage}>70%</Text>
+       <View style={styles.daily}>
+        <HomeCard txt={"Daily Progress"}/> 
+       </View>
+       <Text style={styles.categories}> Categories</Text>
+       <View style={styles.flexContainer}>
+      <View style={styles.row}>
+        <View style={styles.box}>
+           <SmallCard txt={"Stress"}/> 
+         </View>
+         <View style={styles.box}>
+           <SmallCard txt={"Sleep"}/> 
+         </View>
       </View>
-
-      {/* Category Metrics */}
-      
-      <View style={styles.categories}>
-        <Text style={styles.category}>Stress</Text>
-        <Text style={styles.progressPercentage}>20%</Text>
-        {/* Repeat for other categories */}
+      <View style={styles.row}>
+      <View style={styles.box}>
+           <SmallCard txt={"Positivity"}/> 
+         </View>
+         <View style={styles.box}>
+           <SmallCard txt={"Health"}/> 
+         </View>
       </View>
+    </View>
+    
       </ImageBackground>
     </View>
   );
@@ -53,18 +68,25 @@ const styles = StyleSheet.create({
     backgroundColor: "#04293A"
   },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
     justifyContent: 'flex-start',
     color: Color.colorWhite,
     fontFamily: FontFamily.quicksandSemiBold,
     fontWeight: "600",
   },
   greeting: {
-    fontSize: 24,
-    fontWeight: 'bold',
+    fontSize: 20,
+    fontWeight: 'normal',
     color: Color.colorWhite,
     fontFamily: FontFamily.quicksandSemiBold,
+  },
+  userName:{
+    fontSize: 24,
+    color: Color.colorWhite,
+    fontFamily: FontFamily.quicksandBold,
+    fontWeight: 'normal',
+   
   },
   profileImage: {
     width: 40,
@@ -94,7 +116,7 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     position: 'absolute',
-    top: 90,
+    top: 160,
     left: 0,
     right: 0,
     bottom: 0,
@@ -107,6 +129,67 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  leftbutton: {
+    alignItems: 'center',
+    backgroundColor: '#FFC178',
+    paddingHorizontal: 40,
+    paddingVertical: 5, 
+    borderRadius: 50
+  },
+  rightbutton: {
+    alignItems: 'center',
+    paddingHorizontal: 40,
+    paddingVertical: 5, 
+    borderRadius: 50,
+    borderColor: Color.colorSilver,
+    borderWidth: 0.9
+    
+  },
+  buttonView:{
+    width: "100%",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical: 16
+  },
+  Buttontext:{
+    fontSize: 18,
+    fontWeight: 'normal',
+    color: Color.colorBlack,
+    fontFamily: FontFamily.quicksandSemiBold,
+  },
+  rightButtontext:{
+    fontSize: 18,
+    fontWeight: 'normal',
+    color: Color.colorWhite,
+    fontFamily: FontFamily.quicksandSemiBold,
+  },
+  daily: {
+     height: "40%",
+     marginTop: "5%",
+     marginHorizontal:"5%",
+  },
+  flexContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'flex-start',
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  box: {
+    width: "45%",
+    height: "45%",
+    marginHorizontal: 10
+  },
+  categories:{
+    fontSize: 30,
+    fontWeight: 'normal',
+    color: Color.colorWhite,
+    fontFamily: FontFamily.quicksandSemiBold,
+    position: "absolute",
+    top: "35%",
+    left: "25%"
+  }
 });
 
 export default HomeScreen;

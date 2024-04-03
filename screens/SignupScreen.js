@@ -56,7 +56,7 @@ const SignupScreen = ({ navigation }) => {
           <FormInput
             labelValue={contact}
             onChangeText={(userContact) => setContact(userContact)}
-            placeholderText="Contact Number"
+            placeholderText="Contact Number  "
             iconType='phone'
             autoCapitalize='none'
             autoCorrect={false}
@@ -78,7 +78,7 @@ const SignupScreen = ({ navigation }) => {
           <FormInput
             labelValue={ccontact}
             onChangeText={(closeContact) => setCcontact(closeContact)}
-            placeholderText="Contact Number"
+            placeholderText="Contact Number  "
             iconType='phone'
             autoCapitalize='none'
             autoCorrect={false}
