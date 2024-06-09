@@ -2,16 +2,6 @@
 
 Developed a React Native application that provides users with a virtual companion bot for conversation and mental well-being support. The bot can engage in natural language conversations, offering companionship and basic advice.
 
-## Table of contents (optional)
-
-- Requirements
-- Installation
-- Configuration
-- Troubleshooting
-- Working
-- Maintainers
-
-
 ## Requirements 
 
 This module requires the following modules:
@@ -80,6 +70,9 @@ Now that you have successfully run the app, let's modify it.
 You've successfully run and modified your React Native App. :partying_face:
 
 ## Working
+
+https://github.com/ShreyaPandey1106/Being-Well/assets/111476547/5ad6099c-3388-442f-967d-0a38966e44db
+
 
 
 # Learn More
