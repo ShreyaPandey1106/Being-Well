@@ -1,6 +1,26 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Being Well
 
-# Getting Started
+Developed a React Native application that provides users with a virtual companion bot for conversation and mental well-being support. The bot can engage in natural language conversations, offering companionship and basic advice.
+
+## Table of contents (optional)
+
+- Requirements
+- Installation
+- Configuration
+- Troubleshooting
+- Working
+- Maintainers
+
+
+## Requirements 
+
+This module requires the following modules:
+
+- [Rasa chatbot](https://github.com/RohanThawait/rasa-chatbot)
+
+## Installation 
+
+### Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
@@ -55,18 +75,12 @@ Now that you have successfully run the app, let's modify it.
 
    For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-## Congratulations! :tada:
+### Congratulations! :tada:
 
 You've successfully run and modified your React Native App. :partying_face:
 
-### Now what?
+## Working
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
 # Learn More
 
